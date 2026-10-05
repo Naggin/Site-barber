@@ -13,7 +13,7 @@ export function Hero() {
           className="hero__image"
           src="/images/hero-1920.webp"
           srcSet="/images/hero-960.webp 960w, /images/hero-1920.webp 1920w"
-          sizes="(max-width: 520px) calc(100vw - 40px), (max-width: 700px) 480px, (max-width: 1050px) 44vw, 480px"
+          sizes="(max-width: 700px) min(74vw, 300px), (max-width: 1050px) 44vw, 480px"
           width="1920"
           height="2880"
           alt="Jean Kreuz usa o secador para finalizar o cabelo de um cliente sorrindo."

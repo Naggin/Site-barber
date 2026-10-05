@@ -15,9 +15,11 @@ export function About() {
         />
       </div>
       <div className="about__copy" data-reveal data-reveal-delay="1">
-        <p className="section-label">QUEM ESTÁ POR TRÁS</p>
-        <h2 className="section-heading" id="about-title">JEAN KREUZ.</h2>
-        <p className="about__statement">Mais de 10 anos de experiência.<br />Um atendimento que é sobre você.</p>
+        <div className="about__intro">
+          <p className="section-label">QUEM ESTÁ POR TRÁS</p>
+          <h2 className="section-heading" id="about-title">JEAN KREUZ.</h2>
+          <p className="about__statement">Mais de 10 anos de experiência.<br />Um atendimento que é sobre você.</p>
+        </div>
         <p className="section-copy">
           O estilo de Jean carrega sua ligação com o hip-hop. No trabalho, essa
           identidade encontra o cuidado de ouvir, entender e valorizar o estilo de cada pessoa.
