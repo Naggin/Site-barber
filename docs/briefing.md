@@ -24,6 +24,8 @@ A abertura apresenta Jean Kreuz, sua experiência e seu atendimento, com a foto 
 
 Fontes: Sedgwick Ave Display na marca; DM Sans larga e em negrito nos títulos H1, H2 e H3, e em peso regular nos textos. Arquivos e licenças ficam em `public/fonts/`. A foto da abertura não leva legenda sobreposta.
 
+Detalhes em tinta preta reforçam a ligação com o grafite: assinatura decorativa “Kreuz”, sublinhados irregulares e pequenos rabiscos. A foto recebe um contorno preto deslocado, sem corte. Uma faixa preta abre a galeria, e a assinatura da apresentação ganha traços de tinta. No celular, a assinatura da home aparece depois da descrição; os adornos ficam menores e fora do texto e da foto. Os SVGs são decorativos, ignorados por leitores de tela, e não representam um autógrafo real.
+
 ## Contato
 
 - WhatsApp confirmado: **+55 (51) 99795-7060**.

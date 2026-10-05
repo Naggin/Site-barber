@@ -1,9 +1,17 @@
+import { InkMarks, InkSignature } from './InkSignature.jsx';
+
 export function Gallery({ photos }) {
   return (
     <section className="gallery" id="galeria" aria-labelledby="gallery-title">
-      <div className="gallery__header container" data-reveal>
-        <p className="section-label">NO DETALHE</p>
-        <h2 className="section-heading" id="gallery-title">O TRABALHO EM CENA.</h2>
+      <div className="gallery__masthead">
+        <div className="gallery__header container" data-reveal>
+          <div className="gallery__heading">
+            <p className="section-label">NO DETALHE</p>
+            <h2 className="section-heading" id="gallery-title">O TRABALHO EM CENA.</h2>
+          </div>
+          <InkSignature className="gallery__signature" />
+          <InkMarks className="gallery__marks" />
+        </div>
       </div>
       <div className="filmstrip">
         {photos.map((photo, index) => (

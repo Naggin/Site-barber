@@ -1,3 +1,5 @@
+import { InkSignature } from './InkSignature.jsx';
+
 export function About() {
   return (
     <section className="about container" id="sobre" aria-labelledby="about-title">
@@ -24,7 +26,7 @@ export function About() {
           Com a Kreuz Barber, ele leva o atendimento personalizado até o seu evento.
           Para se preparar, curtir a experiência e chegar ao seu momento com confiança.
         </p>
-        <p className="about__signature">KREUZ BARBER</p>
+        <InkSignature className="about__signature" word="KREUZ BARBER" compact />
       </div>
     </section>
   );
