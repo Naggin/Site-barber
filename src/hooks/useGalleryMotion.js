@@ -17,7 +17,9 @@ function subscribeToMotionPreference(listener) {
 }
 
 function getMotionPreference() {
-  return typeof window !== 'undefined' && Boolean(window.matchMedia?.(motionQuery).matches);
+  return typeof window !== 'undefined'
+    && typeof window.Element?.prototype.animate === 'function'
+    && Boolean(window.matchMedia?.(motionQuery).matches);
 }
 
 function getServerMotionPreference() {
@@ -33,84 +35,112 @@ export function useGalleryMotion() {
   const [paused, setPaused] = useState(false);
   const [hover, setHover] = useState(false);
   const viewportRef = useRef(null);
+  const trackRef = useRef(null);
   const groupRef = useRef(null);
+  const restingOffsetRef = useRef(0);
 
   useEffect(() => {
     const viewport = viewportRef.current;
+    const track = trackRef.current;
     const group = groupRef.current;
-    if (!viewport || !group) return;
+    if (!viewport || !track || !group) return;
 
     if (!motionAllowed) {
       viewport.scrollLeft = 0;
+      track.style.transform = '';
+      restingOffsetRef.current = 0;
       return;
     }
     if (paused || hover) return;
 
-    let frameId = 0;
-    let previousTime = null;
-    let position = viewport.scrollLeft;
+    let animation;
     let cycleWidth = 0;
     let disposed = false;
+    let imagesReady = false;
+    let imagePreparation;
     const initialBounds = viewport.getBoundingClientRect();
     let visible = initialBounds.bottom > 0 && initialBounds.top < window.innerHeight;
 
-    const stop = () => {
-      window.cancelAnimationFrame(frameId);
-      frameId = 0;
-      previousTime = null;
+    const readPosition = () => {
+      const offset = animation
+        ? ((Number(animation.currentTime ?? 0) / 1000) * pixelsPerSecond) % cycleWidth
+        : restingOffsetRef.current;
+      return viewport.scrollLeft + offset;
     };
 
-    const animate = (time) => {
-      frameId = 0;
-      if (disposed || !visible || document.hidden || cycleWidth <= 0) return;
+    const prepareImages = () => {
+      if (imagePreparation) return;
+      const images = Array.from(track.querySelectorAll('img'));
+      images.forEach((image) => { image.loading = 'eager'; });
+      imagePreparation = Promise.all(images.map((image) => image.decode().catch(() => {})))
+        .then(() => {
+          if (disposed) return;
+          imagesReady = true;
+          updatePlayback();
+        });
+    };
 
-      if (previousTime !== null) {
-        const elapsed = Math.min((time - previousTime) / 1000, 0.1);
-        position = (position + elapsed * pixelsPerSecond) % cycleWidth;
-        viewport.scrollLeft = position;
+    const updatePlayback = () => {
+      if (disposed || !animation) return;
+      if (!visible || document.hidden || !imagesReady) {
+        animation.pause();
+        if (visible && !document.hidden && !imagesReady) prepareImages();
+        return;
       }
-      previousTime = time;
-      frameId = window.requestAnimationFrame(animate);
-    };
-
-    const start = () => {
-      if (disposed || frameId || !visible || document.hidden || cycleWidth <= 0) return;
-      position = viewport.scrollLeft % cycleWidth;
-      previousTime = null;
-      frameId = window.requestAnimationFrame(animate);
+      animation.play();
     };
 
     const measure = () => {
       const copy = group.nextElementSibling;
       const firstBounds = group.getBoundingClientRect();
-      cycleWidth = copy ? copy.getBoundingClientRect().left - firstBounds.left : 0;
-      if (cycleWidth > 0) {
-        position = viewport.scrollLeft % cycleWidth;
-        viewport.scrollLeft = position;
-        start();
-      } else {
-        stop();
+      const nextWidth = copy ? copy.getBoundingClientRect().left - firstBounds.left : 0;
+      if (nextWidth <= 0) {
+        animation?.pause();
+        return;
       }
-    };
+      if (animation && Math.abs(nextWidth - cycleWidth) < 0.01) return;
 
-    const updateVisibility = () => {
-      if (document.hidden) stop();
-      else start();
+      const position = readPosition();
+      const phase = animation
+        ? (((position / cycleWidth) % 1) + 1) % 1 * nextWidth
+        : ((position % nextWidth) + nextWidth) % nextWidth;
+      animation?.cancel();
+      cycleWidth = nextWidth;
+
+      // Transform animations retain subpixel positions and run on the browser's
+      // compositor; slow scrollLeft updates were rounded to whole pixels.
+      animation = track.animate([
+        { transform: 'translate3d(0, 0, 0)' },
+        { transform: `translate3d(${-cycleWidth}px, 0, 0)` },
+      ], {
+        duration: (cycleWidth / pixelsPerSecond) * 1000,
+        iterations: Infinity,
+        easing: 'linear',
+      });
+      animation.pause();
+      animation.currentTime = (phase / pixelsPerSecond) * 1000;
+      viewport.scrollLeft = 0;
+      restingOffsetRef.current = 0;
+      track.style.transform = '';
+      updatePlayback();
     };
 
     const updateIntersection = () => {
       const bounds = viewport.getBoundingClientRect();
       visible = bounds.bottom > 0 && bounds.top < window.innerHeight;
-      if (visible) start();
-      else stop();
+      updatePlayback();
+    };
+
+    const updateLayout = () => {
+      measure();
+      updateIntersection();
     };
 
     let intersectionObserver;
     if ('IntersectionObserver' in window) {
       intersectionObserver = new IntersectionObserver(([entry]) => {
         visible = entry.isIntersecting;
-        if (visible) start();
-        else stop();
+        updatePlayback();
       });
       intersectionObserver.observe(viewport);
     } else {
@@ -119,22 +149,29 @@ export function useGalleryMotion() {
 
     let resizeObserver;
     if ('ResizeObserver' in window) {
-      resizeObserver = new ResizeObserver(measure);
+      resizeObserver = new ResizeObserver(updateLayout);
       resizeObserver.observe(group);
       resizeObserver.observe(viewport);
     }
-    window.addEventListener('resize', measure);
-    document.addEventListener('visibilitychange', updateVisibility);
-    measure();
+    window.addEventListener('resize', updateLayout);
+    document.addEventListener('visibilitychange', updatePlayback);
+    updateLayout();
 
     return () => {
       disposed = true;
-      stop();
+      const position = readPosition();
+      animation?.cancel();
+      // Hand the same position to native scrolling for touch/keyboard browsing.
+      // Keep its fractional remainder so pausing and resuming do not snap.
+      track.style.transform = '';
+      viewport.scrollLeft = position;
+      restingOffsetRef.current = position - viewport.scrollLeft;
+      track.style.transform = `translate3d(${-restingOffsetRef.current}px, 0, 0)`;
       intersectionObserver?.disconnect();
       resizeObserver?.disconnect();
-      window.removeEventListener('resize', measure);
+      window.removeEventListener('resize', updateLayout);
       window.removeEventListener('scroll', updateIntersection);
-      document.removeEventListener('visibilitychange', updateVisibility);
+      document.removeEventListener('visibilitychange', updatePlayback);
     };
   }, [motionAllowed, paused, hover]);
 
@@ -143,6 +180,7 @@ export function useGalleryMotion() {
     paused,
     hover,
     viewportRef,
+    trackRef,
     groupRef,
     togglePaused: () => setPaused((current) => !current),
     pause: () => setPaused(true),

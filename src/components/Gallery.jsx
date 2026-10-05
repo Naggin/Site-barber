@@ -6,6 +6,7 @@ export function Gallery({ photos }) {
     motionAllowed,
     paused,
     viewportRef,
+    trackRef,
     groupRef,
     togglePaused,
     pause,
@@ -53,7 +54,7 @@ export function Gallery({ photos }) {
         onWheel={onWheel}
         data-reveal
       >
-        <div className="filmstrip__track">
+        <div className="filmstrip__track" ref={trackRef}>
           <div className="filmstrip__group" ref={groupRef}>
             {renderPhotos()}
           </div>
