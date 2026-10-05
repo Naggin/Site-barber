@@ -26,6 +26,10 @@ Fontes: Sedgwick Ave Display na marca e nas assinaturas; DM Sans larga e em negr
 
 Detalhes em tinta preta reforçam a ligação com o grafite: assinatura decorativa “Kreuz”, sublinhados irregulares e pequenos rabiscos. A foto recebe um contorno preto deslocado, sem corte. Uma faixa preta abre a galeria, e a assinatura da apresentação ganha traços de tinta. No celular, a assinatura da home aparece depois da descrição; os adornos ficam menores e fora do texto e da foto. Os SVGs são decorativos, ignorados por leitores de tela, e não representam um autógrafo real.
 
+A galeria desliza horizontalmente a 24px por segundo, em uma faixa contínua. O visitante pode pausar e retomar pelo botão abaixo das fotos; passar o mouse suspende o movimento, e foco, toque ou rolagem horizontal pausam para explorar. A animação para fora da tela e quando a aba está oculta. Com movimento reduzido ou sem JavaScript, as quatro fotos ficam estáticas, em quatro colunas no desktop e duas no celular. Cópias usadas para fechar o ciclo são ignoradas por leitores de tela.
+
+Os atendimentos aparecem em três blocos visuais para casamentos, eventos e aniversários, com números grandes e traços de tinta. A sequência preto, branco e preto substitui a lista comprida sobre fundo preto. No celular e em telas menores, os blocos ficam empilhados. O contato tem uma chamada curta, descrição prática, botão de orçamento e telefone.
+
 ## Contato
 
 - WhatsApp confirmado: **+55 (51) 99795-7060**.

@@ -25,6 +25,8 @@ npm run preview
 
 O build fica em `dist/`. Confira a abertura, o menu no celular, a navegação entre seções, o carregamento das fotos e os links de orçamento. O WhatsApp deve apontar para `5551997957060`, com a mensagem definida em `src/data/site.js`. Os testes locais não enviam mensagens.
 
+A galeria tem movimento horizontal lento e botão de pausa. Confira a pausa ao passar o mouse, tocar ou navegar pelo teclado, além da apresentação estática com movimento reduzido. O movimento para fora da tela e com a aba oculta. Os três blocos de atendimentos e o contato devem caber em telas de 320px sem rolagem horizontal na página.
+
 ## Visualizar sem instalar ferramentas
 
 Depois de extrair o ZIP do projeto, abra **`ABRIR-KREUZ-BARBER.html`**, na pasta principal, no Chrome ou Edge. A mesma prévia fica em `preview/kreuz-barber.html`. Ela inclui o conteúdo já renderizado, imagens, fontes, estilos e código no próprio HTML; a página aparece mesmo sem JavaScript. O WhatsApp precisa de conexão quando você clicar no link de orçamento.

@@ -6,10 +6,10 @@ export function Contact({ contact }) {
       <div className="contact__inner container">
         <div className="contact__copy" data-reveal>
           <p className="section-label">VAMOS CONVERSAR</p>
-          <h2 className="section-heading" id="contact-title">SEU PRÓXIMO<br />MOMENTO COMEÇA AQUI.</h2>
+          <h2 className="section-heading" id="contact-title">SEU EVENTO,<br />DO SEU JEITO.</h2>
           <p className="section-copy">
-            Me conta onde, quando e como você imagina o seu evento.
-            Vamos combinar os detalhes do seu atendimento.
+            Conte a data e o local do evento. Jean prepara um orçamento
+            personalizado para você.
           </p>
         </div>
         <div className="contact__actions" data-reveal data-reveal-delay="1">
@@ -23,7 +23,6 @@ export function Contact({ contact }) {
           >
             {contact.phoneDisplay}
           </WhatsAppLink>
-          <p className="contact__availability">ATENDIMENTO NO LOCAL DO SEU EVENTO.</p>
         </div>
       </div>
     </section>
