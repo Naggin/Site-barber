@@ -1,7 +1,7 @@
 export function About() {
   return (
     <section className="about container" id="sobre" aria-labelledby="about-title">
-      <div className="about__media">
+      <div className="about__media" data-reveal>
         <img
           className="about__image"
           src="/images/jean-960.webp"
@@ -12,7 +12,7 @@ export function About() {
           decoding="async"
         />
       </div>
-      <div className="about__copy">
+      <div className="about__copy" data-reveal data-reveal-delay="1">
         <p className="section-label">QUEM ESTÁ POR TRÁS</p>
         <h2 className="section-heading" id="about-title">JEAN KREUZ.</h2>
         <p className="about__statement">Mais de 10 anos de experiência.<br />Um atendimento que é sobre você.</p>

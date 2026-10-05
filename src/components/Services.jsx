@@ -1,10 +1,8 @@
-import { WhatsAppLink } from './WhatsAppLink.jsx';
-
-export function Services({ services, contact }) {
+export function Services({ services }) {
   return (
     <section className="services" id="atendimentos" aria-labelledby="services-title">
       <div className="container">
-        <div className="services__intro">
+        <div className="services__intro" data-reveal>
           <div>
             <p className="section-label">DO SEU JEITO</p>
             <h2 className="section-heading" id="services-title">O EVENTO É SEU.<br />O CUIDADO TAMBÉM.</h2>
@@ -16,16 +14,13 @@ export function Services({ services, contact }) {
       </div>
       <div className="services__list">
         {services.map((service) => (
-          <article className="service-row" key={service.number}>
+          <article className="service-row" key={service.number} data-reveal>
             <span className="service-row__number" aria-hidden="true">{service.number}</span>
             <h3 className="service-row__title">{service.title}</h3>
             <p className="service-row__description">{service.description}</p>
           </article>
         ))}
       </div>
-      <WhatsAppLink contact={contact} className="services__link" aria-label="Conversar sobre meu evento pelo WhatsApp (abre em uma nova aba)">
-        Conversar sobre meu evento <span aria-hidden="true">↗</span>
-      </WhatsAppLink>
       </div>
     </section>
   );
