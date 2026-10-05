@@ -22,7 +22,7 @@ A foto obrigatória da abertura é `making off noivo-10.jpg.jpeg`, originalmente
 
 A abertura apresenta Jean Kreuz, sua experiência e seu atendimento, com a foto inteira na proporção original 2:3, sem zoom ou corte. No celular, a ordem é nome, foto e descrição. Animações suaves de entrada e revelação na rolagem, sem ampliar a foto, respeitam a preferência por movimento reduzido; o conteúdo permanece visível sem JavaScript.
 
-Fontes: Sedgwick Ave Display na marca; DM Sans larga e em negrito nos títulos H1, H2 e H3, e em peso regular nos textos. Arquivos e licenças ficam em `public/fonts/`. A foto da abertura não leva legenda sobreposta.
+Fontes: Sedgwick Ave Display na marca e nas assinaturas; DM Sans larga e em negrito nos títulos H1, H2 e H3, e em peso regular nos textos; Bebas Neue na navegação e nas pequenas etiquetas de seção, com aparência de cartaz urbano. Navegação a 20px, etiquetas e botão de menu a 18px, com espaçamento moderado e boa leitura no celular. Arquivos e licenças ficam em `public/fonts/`. A foto da abertura não leva legenda sobreposta.
 
 Detalhes em tinta preta reforçam a ligação com o grafite: assinatura decorativa “Kreuz”, sublinhados irregulares e pequenos rabiscos. A foto recebe um contorno preto deslocado, sem corte. Uma faixa preta abre a galeria, e a assinatura da apresentação ganha traços de tinta. No celular, a assinatura da home aparece depois da descrição; os adornos ficam menores e fora do texto e da foto. Os SVGs são decorativos, ignorados por leitores de tela, e não representam um autógrafo real.
 

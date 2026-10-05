@@ -7,6 +7,14 @@
 }
 
 @font-face {
+  font-family: 'Bebas Neue';
+  src: url('/fonts/bebas-neue.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'DM Sans';
   src: url('/fonts/dm-sans.ttf') format('truetype');
   font-style: normal;
@@ -26,6 +34,7 @@
   --muted: #535353;
   --line: #d5d5d5;
   --heading-font: 'DM Sans', Arial, sans-serif;
+  --detail-font: 'Bebas Neue', Impact, sans-serif;
 }
 
 * { box-sizing: border-box; }
@@ -52,7 +61,7 @@ h1, h2, h3 { font-family: var(--heading-font); font-weight: 800; }
 .site-header .brand { position: absolute; left: 50%; font-size: 28px; transform: translateX(-50%) rotate(-5deg); }
 .site-nav { display: flex; width: 100%; max-width: 640px; align-items: center; justify-content: space-between; gap: 112px; }
 .site-nav__group { display: flex; align-items: center; gap: 24px; }
-.site-nav a { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; text-decoration: none; padding-block: 12px; }
+.site-nav a { font-family: var(--detail-font); font-size: 20px; font-weight: 400; line-height: 1.2; text-transform: uppercase; letter-spacing: .8px; text-decoration: none; padding-block: 12px; }
 .site-nav a:hover { text-decoration: underline; text-underline-offset: 7px; }
 .site-header .button { padding: 14px 20px; font-size: 11px; }
 .menu-toggle { display: none; }
@@ -67,7 +76,7 @@ h1, h2, h3 { font-family: var(--heading-font); font-weight: 800; }
 .hero { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-rows: 1fr 1fr; column-gap: clamp(40px, 7vw, 100px); row-gap: 24px; align-items: center; padding-block: 32px; }
 .hero__heading { grid-column: 1; grid-row: 1; align-self: end; animation: enter-page 650ms ease-out both; }
 .hero__copy { grid-column: 1; grid-row: 2; align-self: start; max-width: 410px; animation: enter-page 650ms 160ms ease-out both; }
-.hero__eyebrow, .section-label { display: block; width: fit-content; padding-top: 14px; border-top: 3px solid currentColor; margin-bottom: 28px; font-size: 10px; line-height: 1.5; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; }
+.hero__eyebrow, .section-label { display: block; width: fit-content; padding-top: 14px; border-top: 3px solid currentColor; margin-bottom: 28px; font-family: var(--detail-font); font-size: 18px; line-height: 1.2; font-weight: 400; text-transform: uppercase; letter-spacing: .8px; }
 .hero__eyebrow, .about .section-label { padding: 8px 12px; border-top: 0; color: #fff; background: #101010; }
 .hero__title { max-width: 7.5ch; margin-bottom: 0; font-family: var(--heading-font); font-size: clamp(64px, 6.4vw, 92px); font-weight: 800; line-height: .98; letter-spacing: -.055em; }
 .hero__description { margin-bottom: 18px; font-size: 19px; line-height: 1.65; }
@@ -187,7 +196,7 @@ h1, h2, h3 { font-family: var(--heading-font); font-weight: 800; }
   .site-header__inner { min-height: 96px; }
   .brand { font-size: 30px; }
   .site-header .brand { font-size: 26px; }
-  .menu-toggle { position: absolute; right: 0; top: 50%; transform: translateY(-50%); display: flex; align-items: center; justify-content: center; gap: 10px; min-width: 64px; min-height: 44px; padding: 8px 0; background: transparent; color: #101010; border: 0; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+  .menu-toggle { position: absolute; right: 0; top: 50%; transform: translateY(-50%); display: flex; align-items: center; justify-content: center; gap: 10px; min-width: 64px; min-height: 44px; padding: 8px 0; background: transparent; color: #101010; border: 0; font-family: var(--detail-font); font-size: 18px; line-height: 1.2; font-weight: 400; text-transform: uppercase; letter-spacing: .8px; }
   .menu-toggle__icon { display: flex; flex-direction: column; gap: 5px; width: 18px; }
   .menu-toggle__icon span { height: 2px; width: 18px; background: currentColor; }
   .site-nav { display: none; position: absolute; top: 100%; left: -20px; right: -20px; width: auto; max-width: none; padding: 18px 20px 24px; background: #fff; border-bottom: 1px solid #d5d5d5; }
