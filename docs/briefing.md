@@ -6,6 +6,7 @@
 - Profissional: **Jean Kreuz**, barbeiro com mais de 10 anos de experiência.
 - Influência de hip-hop e estilo oversized na identidade visual.
 - Marca no cabeçalho em duas linhas, `KREUZ` e `BARBER`, ambas com lettering de grafite.
+- Lettering aprovado preservado; marca centralizada e um pouco menor no cabeçalho.
 
 ## Objetivo
 
@@ -19,13 +20,14 @@ Site em preto e branco, inspirado na composição editorial da referência forne
 
 A foto obrigatória da abertura é `making off noivo-10.jpg.jpeg`, originalmente em preto e branco, mostrando o atendimento com secador e o cliente sorrindo. As seis fotos fornecidas aparecem na estrutura. Originais preservados; cópias WebP em escala de cinza para o site.
 
-Fontes: Sedgwick Ave Display na marca, Bebas Neue nos títulos e DM Sans nos textos. Arquivos e licenças ficam em `public/fonts/`.
+Fontes: Sedgwick Ave Display na marca; DM Sans larga e em negrito nos títulos H1, H2 e H3, e em peso regular nos textos. Arquivos e licenças ficam em `public/fonts/`. A foto da abertura não leva legenda sobreposta.
 
 ## Contato
 
 - WhatsApp confirmado: **+55 (51) 99795-7060**.
 - Número utilizado no link: `5551997957060`.
 - Botão principal: **Solicitar orçamento**.
+- Na abertura, botão preto com área branca para a seta e indicação **Pelo WhatsApp**.
 - Mensagem: “Olá, Jean! Conheci a Kreuz Barber pelo site e gostaria de um orçamento para o meu evento.”
 
 Os links abrem uma conversa com a mensagem preenchida; o visitante decide enviá-la. Não há formulário ou armazenamento de dados de visitantes na estrutura inicial.

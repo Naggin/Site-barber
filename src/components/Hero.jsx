@@ -13,8 +13,16 @@ export function Hero({ contact }) {
           Atendimento personalizado para casamentos, eventos e aniversários.
           Com o cuidado e a presença de Jean Kreuz.
         </p>
-        <WhatsAppLink contact={contact} className="button button--dark">
-          Solicitar orçamento <span aria-hidden="true">↗</span>
+        <WhatsAppLink contact={contact} className="button button--dark hero__cta">
+          <span className="hero__cta-copy">
+            <span className="hero__cta-label">Solicitar orçamento</span>
+            <span className="hero__cta-channel">Pelo WhatsApp</span>
+          </span>
+          <span className="hero__cta-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" focusable="false">
+              <path d="M6 18 18 6M6 6h12v12" stroke="currentColor" strokeWidth="2" />
+            </svg>
+          </span>
         </WhatsAppLink>
         <p className="hero__note">MAIS DE 10 ANOS DE EXPERIÊNCIA. DISPONIBILIDADE PARA VIAJAR.</p>
       </div>
@@ -29,7 +37,6 @@ export function Hero({ contact }) {
           alt="Jean Kreuz usa o secador para finalizar o cabelo de um cliente sorrindo."
           fetchPriority="high"
         />
-        <p className="hero__image-caption">JEAN KREUZ / ATENDIMENTO PERSONALIZADO</p>
       </div>
     </section>
   );

@@ -43,10 +43,14 @@ export function Header({ navigation, brand }) {
           className={`site-nav${menuOpen ? ' site-nav--open' : ''}`}
           aria-label="Navegação principal"
         >
-          {navigation.map((item) => (
-            <a href={item.href} key={item.href} onClick={() => setMenuOpen(false)}>
-              {item.label}
-            </a>
+          {[navigation.slice(0, 2), navigation.slice(2)].map((group, index) => (
+            <div className="site-nav__group" key={index}>
+              {group.map((item) => (
+                <a href={item.href} key={item.href} onClick={() => setMenuOpen(false)}>
+                  {item.label}
+                </a>
+              ))}
+            </div>
           ))}
         </nav>
       </div>
