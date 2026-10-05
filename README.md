@@ -27,7 +27,9 @@ O build fica em `dist/`. Confira a abertura, o menu no celular, a navegação en
 
 ## Visualizar sem instalar ferramentas
 
-Baixe `preview/kreuz-barber.html` e abra o arquivo no Chrome ou Edge. Essa prévia inclui imagens, fontes, estilos e código no próprio HTML. O WhatsApp precisa de conexão quando você clicar no link de orçamento.
+Depois de extrair o ZIP do projeto, abra **`ABRIR-KREUZ-BARBER.html`**, na pasta principal, no Chrome ou Edge. A mesma prévia fica em `preview/kreuz-barber.html`. Ela inclui o conteúdo já renderizado, imagens, fontes, estilos e código no próprio HTML; a página aparece mesmo sem JavaScript. O WhatsApp precisa de conexão quando você clicar no link de orçamento.
+
+O `index.html` da pasta principal é a entrada de desenvolvimento do Vite e precisa do servidor iniciado com `npm run dev`. Para visualizar com duplo clique, use `ABRIR-KREUZ-BARBER.html`.
 
 A prévia representa a versão em que foi gerada. Depois de alterar o site, atualize-a com:
 
