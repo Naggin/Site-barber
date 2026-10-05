@@ -1,0 +1,32 @@
+{
+  "fonts": [
+    {
+      "family": "Sedgwick Ave Display",
+      "file": "sedgwick-ave-display.ttf",
+      "src": "/fonts/sedgwick-ave-display.ttf",
+      "bytes": 140148,
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/sedgwickavedisplay/SedgwickAveDisplay-Regular.ttf",
+      "license": "OFL-sedgwick-ave-display.txt",
+      "sha256": "3b9c295a146bafb93c8a12c1dde38a2fe47512777daf1458825e291752469a38"
+    },
+    {
+      "family": "Bebas Neue",
+      "file": "bebas-neue.ttf",
+      "src": "/fonts/bebas-neue.ttf",
+      "bytes": 61400,
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/bebasneue/BebasNeue-Regular.ttf",
+      "license": "OFL-bebas-neue.txt",
+      "sha256": "08e4623805102d819f58601e46e345648846075e363b2ceb23313c2d1c83ec73"
+    },
+    {
+      "family": "DM Sans",
+      "file": "dm-sans.ttf",
+      "src": "/fonts/dm-sans.ttf",
+      "bytes": 240164,
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/dmsans/DMSans%5Bopsz%2Cwght%5D.ttf",
+      "license": "OFL-dm-sans.txt",
+      "sha256": "8cd08d97e89c24d0aa92edd2f0f4c8ee6195eee9b7c9f154865a58b02f0c1c0d"
+    }
+  ],
+  "note": "Self-hosted fonts from the official Google Fonts repository, fetched over verified HTTPS; each is distributed under its included SIL Open Font License."
+}
