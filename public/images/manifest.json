@@ -1,0 +1,75 @@
+{
+  "note": "Derivados WebP otimizados em preto e branco para o site. As seis fotografias originais enviadas pelo usuário permanecem intactas na pasta de anexos. Nenhuma composição foi recortada; o enquadramento final é controlado pelo CSS.",
+  "images": [
+    {
+      "file": "hero-1920.webp",
+      "src": "/images/hero-1920.webp",
+      "alt": "Jean Kreuz finaliza o cabelo de um noivo sorridente, em fotografia preto e branco.",
+      "width": 1920,
+      "height": 2880,
+      "bytes": 796692,
+      "originalName": "making off noivo-10.jpg.jpeg",
+      "originalSha256": "a1ee75669eb38c4143ccbbcf8cd61157de354c2aedf0569530ade6fea89a2e40"
+    },
+    {
+      "file": "hero-960.webp",
+      "src": "/images/hero-960.webp",
+      "alt": "Jean Kreuz finaliza o cabelo de um noivo sorridente, em fotografia preto e branco.",
+      "width": 960,
+      "height": 1440,
+      "bytes": 176386,
+      "originalName": "making off noivo-10.jpg.jpeg",
+      "originalSha256": "a1ee75669eb38c4143ccbbcf8cd61157de354c2aedf0569530ade6fea89a2e40"
+    },
+    {
+      "file": "jean-960.webp",
+      "src": "/images/jean-960.webp",
+      "alt": "Jean Kreuz realiza a preparação do cabelo de um noivo.",
+      "width": 960,
+      "height": 1440,
+      "bytes": 128990,
+      "originalName": "making off noivo-6.jpg.jpeg",
+      "originalSha256": "4270448541b8f2eb2e75ecf170c91768ce5943d0ec5b9b4f2a7926393bb38923"
+    },
+    {
+      "file": "detail-960.webp",
+      "src": "/images/detail-960.webp",
+      "alt": "Detalhe do penteado de um noivo durante o atendimento de Jean Kreuz.",
+      "width": 960,
+      "height": 1440,
+      "bytes": 117118,
+      "originalName": "making off noivo-7.jpg.jpeg",
+      "originalSha256": "ef42606d613d77f2698ec22a8057852a21c7c6bd8876a1c8643f6bc0236993d5"
+    },
+    {
+      "file": "backstage-1440.webp",
+      "src": "/images/backstage-1440.webp",
+      "alt": "Jean Kreuz atende um cliente nos bastidores da preparação para um evento.",
+      "width": 1440,
+      "height": 960,
+      "bytes": 108394,
+      "originalName": "making off noivo-2.jpg.jpeg",
+      "originalSha256": "1a78dc3a0cfd11b56d4f90c2045a08b1569a1b33cca3be899c0e81882b364251"
+    },
+    {
+      "file": "preparation-960.webp",
+      "src": "/images/preparation-960.webp",
+      "alt": "Jean Kreuz cuida do cabelo de um noivo antes da cerimônia.",
+      "width": 960,
+      "height": 1440,
+      "bytes": 111608,
+      "originalName": "making off noivo-12.jpg.jpeg",
+      "originalSha256": "1898bada98b01bf2fe567c5ab9ce2ac23aeebaaac1cc00427328d4a72d7e559a"
+    },
+    {
+      "file": "finish-960.webp",
+      "src": "/images/finish-960.webp",
+      "alt": "Jean Kreuz finaliza o penteado de um noivo com secador.",
+      "width": 960,
+      "height": 1440,
+      "bytes": 110986,
+      "originalName": "making off noivo-5.jpg.jpeg",
+      "originalSha256": "de420b93ab8d1f8715183967ec9b611c0e5fabfb28c3f86f7c43797d9619a322"
+    }
+  ]
+}

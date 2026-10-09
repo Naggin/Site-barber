@@ -1,0 +1,45 @@
+# Direção da Kreuz Barber
+
+## Marca e profissional
+
+- Marca: **Kreuz Barber**.
+- Profissional: **Jean Kreuz**, barbeiro com mais de 10 anos de experiência.
+- Identidade visual urbana, com grafite e referências ao estilo oversized.
+- Marca no cabeçalho em duas linhas, `KREUZ` e `BARBER`, ambas com lettering de grafite.
+- Lettering aprovado preservado; marca centralizada e um pouco menor no cabeçalho.
+- Ícone da aba (favicon): marca completa KREUZ / BARBER, com o mesmo lettering em contornos vetoriais pretos sobre fundo branco.
+- Textos de apresentação focados na experiência de Jean e no cuidado com o estilo de cada cliente.
+
+## Objetivo
+
+Divulgar o atendimento personalizado para casamentos, eventos e aniversários, e facilitar o pedido de orçamento de pacotes pelo WhatsApp. Jean tem disponibilidade para viajar e atender onde o evento acontecer.
+
+Não foram definidos preços, conteúdo fechado dos pacotes, agenda, endereço, depoimentos ou perfil de Instagram. A estrutura não presume essas informações.
+
+## Visual
+
+Site em preto e branco, inspirado na composição editorial da referência fornecida: fotografia em destaque, títulos fortes, menu simples e faixas de imagens. Navegação compacta junto da marca centralizada e menor distância entre as seções.
+
+A foto obrigatória da abertura é `making off noivo-10.jpg.jpeg`, originalmente em preto e branco, mostrando o atendimento com secador e o cliente sorrindo. As seis fotos fornecidas aparecem na estrutura. Originais preservados; cópias WebP em escala de cinza para o site.
+
+A abertura apresenta Jean Kreuz, sua experiência e seu atendimento, com a foto inteira na proporção original 2:3, sem zoom ou corte. No celular, a ordem é nome, foto e descrição. Animações suaves de entrada e revelação na rolagem, sem ampliar a foto, respeitam a preferência por movimento reduzido; o conteúdo permanece visível sem JavaScript.
+
+Fontes: Sedgwick Ave Display na marca e nas assinaturas; DM Sans larga e em negrito nos títulos H1, H2 e H3, e em peso regular nos textos; Bebas Neue na navegação e nas pequenas etiquetas de seção, com aparência de cartaz urbano. Navegação a 20px e etiquetas a 18px no desktop; no celular, etiquetas e botão de menu a 16px, com espaçamento moderado e boa leitura. Arquivos e licenças ficam em `public/fonts/`. A foto da abertura não leva legenda sobreposta.
+
+Detalhes em tinta preta reforçam a ligação com o grafite: assinatura decorativa “Kreuz”, sublinhados irregulares e pequenos rabiscos. A foto recebe um contorno preto deslocado, sem corte. Uma faixa preta abre a galeria, e a assinatura da apresentação ganha traços de tinta. No celular, a assinatura da home aparece depois da descrição; os adornos ficam menores e fora do texto e da foto. Os SVGs são decorativos, ignorados por leitores de tela, e não representam um autógrafo real.
+
+A galeria desliza horizontalmente a 24px por segundo, em uma faixa contínua. O movimento usa posições fracionárias com uma animação de transform no compositor do navegador, evitando os pequenos saltos causados pelo arredondamento da rolagem para pixels inteiros. As fotos são decodificadas antes de começar o movimento. O visitante pode pausar e retomar pelo botão abaixo das fotos; passar o mouse suspende o movimento, e foco, toque ou rolagem horizontal pausam para explorar. A posição é preservada ao pausar e retomar. A animação para fora da tela e quando a aba está oculta. Com movimento reduzido, sem JavaScript ou sem suporte à API de animação do navegador, as quatro fotos ficam estáticas, em quatro colunas no desktop e duas no celular. Cópias usadas para fechar o ciclo são ignoradas por leitores de tela.
+
+Os atendimentos aparecem em três blocos visuais para casamentos, eventos e aniversários, com números grandes e traços de tinta. A sequência preto, branco e preto substitui a lista comprida sobre fundo preto. No celular e em telas menores, os blocos ficam empilhados. O contato tem uma chamada curta, descrição prática, botão de orçamento e telefone.
+
+A composição mobile tem proporções próprias até 700px: cabeçalho de 80px, foto principal completa com largura máxima de 300px, textos e espaços menores. Na apresentação, uma foto secundária pequena acompanha o nome e o resumo do profissional; os parágrafos seguem na largura disponível. Os cartões de atendimento colocam o número ao lado do conteúdo para reduzir a altura. As fotos da galeria ficam verticais na proporção 2:3 e o botão de pausa acompanha a legenda. O orçamento permanece no final, com botão de 56px. O visual de desktop aprovado é preservado.
+
+## Contato
+
+- WhatsApp confirmado: **+55 (51) 99795-7060**.
+- Número utilizado no link: `5551997957060`.
+- Botão principal: **Solicitar orçamento**.
+- Orçamento concentrado na seção de contato, ao final da página. A abertura fica livre de botões de orçamento.
+- Mensagem: “Olá, Jean! Conheci a Kreuz Barber pelo site e gostaria de um orçamento para o meu evento.”
+
+Os links abrem uma conversa com a mensagem preenchida; o visitante decide enviá-la. Não há formulário ou armazenamento de dados de visitantes na estrutura inicial.
