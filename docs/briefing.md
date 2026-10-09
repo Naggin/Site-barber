@@ -4,9 +4,11 @@
 
 - Marca: **Kreuz Barber**.
 - Profissional: **Jean Kreuz**, barbeiro com mais de 10 anos de experiência.
-- Influência de hip-hop e estilo oversized na identidade visual.
+- Identidade visual urbana, com grafite e referências ao estilo oversized.
 - Marca no cabeçalho em duas linhas, `KREUZ` e `BARBER`, ambas com lettering de grafite.
 - Lettering aprovado preservado; marca centralizada e um pouco menor no cabeçalho.
+- Ícone da aba (favicon): marca completa KREUZ / BARBER, com o mesmo lettering em contornos vetoriais pretos sobre fundo branco.
+- Textos de apresentação focados na experiência de Jean e no cuidado com o estilo de cada cliente.
 
 ## Objetivo
 

@@ -54,4 +54,4 @@ As fotografias originais permanecem intactas nos anexos do ambiente. Apenas as c
 
 A pasta do projeto é `kreuz-barber`. O histórico Git e a licença foram preservados. Uma cópia completa e verificada do projeto anterior está fora do checkout, em `/workspace/shared/backups/`; `kreuz-backup-path.txt` informa o arquivo correspondente. Não publique esse backup, pois ele preserva também configurações locais antigas.
 
-A renomeação no GitHub para `kreuz-barber` permanece pendente de acesso à API do GitHub pelo ambiente. O remoto atual é `Naggin/debt-manager`; não foi substituído por uma URL de repositório inexistente.
+O repositório atual no GitHub é `Naggin/Site-barber`, anteriormente `Naggin/debt-manager`. A versão do site está na branch `preview/kreuz-barber-20261005`.

@@ -23,7 +23,7 @@ export function Hero() {
       </div>
       <div className="hero__copy">
         <p className="hero__description">
-          Mais de 10 anos de experiência, raízes no hip-hop e um cuidado que valoriza o seu estilo.
+          Mais de 10 anos de experiência e um atendimento que valoriza o seu estilo.
         </p>
         <p className="hero__description hero__description--secondary">
           Com a Kreuz Barber, Jean leva o atendimento personalizado a casamentos,

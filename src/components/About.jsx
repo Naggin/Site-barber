@@ -21,8 +21,8 @@ export function About() {
           <p className="about__statement">Mais de 10 anos de experiência.<br />Um atendimento que é sobre você.</p>
         </div>
         <p className="section-copy">
-          O estilo de Jean carrega sua ligação com o hip-hop. No trabalho, essa
-          identidade encontra o cuidado de ouvir, entender e valorizar o estilo de cada pessoa.
+          Cada atendimento começa com uma conversa. Jean escuta, entende e cuida
+          dos detalhes para valorizar o estilo de cada pessoa.
         </p>
         <p className="section-copy">
           Com a Kreuz Barber, ele leva o atendimento personalizado até o seu evento.
